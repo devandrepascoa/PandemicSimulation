@@ -1,5 +1,6 @@
 /**
  * Class that represents an object in the Canvas
+ *
  * @author André Páscoa, André Carvalho
  * @version 1.0.0
  */
@@ -85,9 +86,6 @@ public class Point {
 
     @Override
     public String toString() {
-        return "Point{" +
-                "x=" + x +
-                ", y=" + y +
-                '}';
+        return "(" + x + "," + y + ")";
     }
 }

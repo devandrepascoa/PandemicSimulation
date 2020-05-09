@@ -2,6 +2,7 @@ import javax.swing.*;
 
 /**
  * Pandemic Simulator
+ *
  * @author André Páscoa, André Carvalho
  * @version 1.0.0
  */
@@ -13,8 +14,9 @@ public class PandemicSimulator {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Pandemic Simulator");
         frame.setSize(WIDTH, HEIGHT);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(new SimulationPanel());
+        frame.setLocationRelativeTo(null); //Centers the frame
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Close operation
+        frame.add(new SimulationPanel(WIDTH, HEIGHT)); //Adds the Simulation panel
         frame.setVisible(true);
     }
 

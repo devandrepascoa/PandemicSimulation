@@ -25,12 +25,11 @@ public class Person extends Point {
     private ArrayList<Person> infectedPeople;
 
     //Attributes, Will change based on slider input
-    private int size = 5;
-    private double infectiveRadius = 10;
+    private int size = 10;
+    private double infectiveRadius = 5;
     private int time_since_infected = 0;
-    private int recovery_time = 2000;
-    private int symptoms_time = 700;
-    private int num_infected = 0;
+    private int recovery_time = 10000; //Recovery after seconds
+    private int symptoms_time = 2000; //Symptoms start after 5 seconds
 
     /**
      * @param name Person's name, used for interactive purposes(non simulation)
@@ -52,10 +51,9 @@ public class Person extends Point {
      */
     public void paint(Graphics g) {
         //Color based on state
-        g.setColor(Color.BLACK);
         switch (this.state) {
             case INFECTED_NO_SYMPTOMS:
-                g.setColor(Color.RED);
+                g.setColor(Color.pink);
                 break;
             case SUSCEPTIBLE:
                 g.setColor(Color.BLACK);
@@ -64,7 +62,7 @@ public class Person extends Point {
                 g.setColor(Color.GRAY);
                 break;
             case INFECTED:
-                g.setColor(Color.GREEN);
+                g.setColor(Color.RED);
                 break;
         }
 
@@ -73,7 +71,6 @@ public class Person extends Point {
                 this.x,
                 this.y,
                 size, size);
-        g.setColor(Color.BLACK);
     }
 
     /**
@@ -107,7 +104,7 @@ public class Person extends Point {
                 if (!person.isInfected() && person.getState() != State.RECOVERED) {
                     person.setState(State.INFECTED_NO_SYMPTOMS);
                     this.addInfected(person);
-                    num_infected++;
+                    city.addNumInfected(1);
                 }
             }
         }

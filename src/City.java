@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.Random;
 import java.util.Stack;
 
 /**
  * Class containing the data structure for the population
+ *
  * @author André Páscoa, André Carvalho
  * @version 1.0.0
  */
@@ -14,12 +14,12 @@ public class City {
     private ArrayList<Person> population;
     private int width;
     private int height;
+    private int num_infected = 1; //Starts with 1 due to the zero day patient
 
     public City(int width, int height, int num_people) {
         this.width = width;
         this.height = height;
         population = new ArrayList<>();
-        Random rand = new Random();
         //Creating the first patient
         zero_day = new Person("Pablo Escobar", width / 2, height / 2);
         zero_day.setState(Person.State.INFECTED_NO_SYMPTOMS);
@@ -27,8 +27,8 @@ public class City {
 
         //Generating a random distribution of num_people-1
         for (int i = 1; i < num_people; i++) {
-            int x = (int) (rand.nextDouble() * width);
-            int y = (int) (rand.nextDouble() * height);
+            int x = (int) (Math.random() * width);
+            int y = (int) (Math.random() * height);
 
             population.add(new Person("Pablo Escobar", x, y));
         }
@@ -60,6 +60,10 @@ public class City {
         }
 
         return nosVisitados;
+    }
+
+    public void addNumInfected(int i){
+        this.num_infected+= i;
     }
 
     //Accessors
@@ -96,4 +100,7 @@ public class City {
     }
 
 
+    public int getNum_infected() {
+        return num_infected;
+    }
 }

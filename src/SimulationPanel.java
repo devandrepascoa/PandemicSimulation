@@ -2,9 +2,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.LinkedList;
 
 /**
  * This class will provide the canvas for the animation
+ *
  * @author André Páscoa, André Carvalho
  * TODO
  * -Faster animations
@@ -12,14 +14,16 @@ import java.awt.event.ActionListener;
 public class SimulationPanel extends JPanel implements ActionListener {
 
     public static final int DELAY = 16; //Update delay(Will update every 16 milliseconds)
+    public static int num_people = 500;
     private final City city;
+    private int tick = 0;
 
     /**
      * Constructors the pandemic panel object,
      * creating the time and the city
      */
-    public SimulationPanel() {
-        city = new City(WIDTH, HEIGHT, 100000);
+    public SimulationPanel(int width, int height) {
+        city = new City(width, height, num_people);
         Timer timer = new Timer(DELAY, this);
         timer.start();
     }
@@ -48,6 +52,16 @@ public class SimulationPanel extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         update();
+        tick++;
+        //Graph test
+        if (tick % 100 == 0) {
+            LinkedList<Person> lista_nodes = city.preOrderIterativo();
+            for (Person p : lista_nodes) {
+                System.out.print(p.toString() + ",");
+            }
+
+            System.out.println("\nN_Inf_Calc: " + lista_nodes.size()+", N_Inf_Reais: "+city.getNum_infected());
+        }
         repaint();
     }
 
@@ -61,10 +75,10 @@ public class SimulationPanel extends JPanel implements ActionListener {
         city.setHeight(this.getBounds().height);
         city.setWidth(this.getBounds().width);
 
+
         //Updates the population
         for (int i = 0; i < city.getNumPeople(); i++) {
-            Person person = city.getPopulation().get(i);
-            person.update(city);
+            city.getPopulation().get(i).update(city);
         }
 
     }
