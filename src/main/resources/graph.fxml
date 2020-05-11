@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox styleClass="background" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="models_controllers_others.GraphController">
+    <Pane fx:id="canvas_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="706.0" />
+    <VBox prefHeight="536.0" prefWidth="213.0">
+        <ImageView fx:id="image_view" fitHeight="224.0" fitWidth="200.0" pickOnBounds="true">
+            <VBox.margin>
+                <Insets left="5.0" top="5.0" />
+            </VBox.margin>
+            <Image url="@default_id.jpg" />
+        </ImageView>
+      <Label fx:id="name_lbl" text="Name: Anthony Fauci">
+         <VBox.margin>
+            <Insets left="5.0" top="10.0" />
+         </VBox.margin></Label>
+      <Label fx:id="in_hospital_lbl" layoutX="10.0" layoutY="160.0" text="In Hospital: false">
+         <VBox.margin>
+            <Insets left="5.0" top="10.0" />
+         </VBox.margin></Label>
+      <Label fx:id="state_lbl" layoutX="10.0" layoutY="160.0" text="Susceptible">
+         <VBox.margin>
+            <Insets left="5.0" top="10.0" />
+         </VBox.margin></Label>
+      <Label fx:id="infected_people_lbl" layoutX="10.0" layoutY="192.0" text="Infected People: 0">
+         <VBox.margin>
+            <Insets left="5.0" top="10.0" />
+         </VBox.margin></Label>
+      <Label fx:id="time_since_infection_lbl" layoutX="10.0" layoutY="208.0" text="TSI: 0.0 Seconds">
+         <VBox.margin>
+            <Insets left="5.0" top="10.0" />
+         </VBox.margin></Label>
+        <VBox alignment="BOTTOM_RIGHT" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <Button fx:id="go_to_sim_mode_btn" mnemonicParsing="false" onAction="#go_to_sim" text="Go to Simulator Mode">
+                <VBox.margin>
+                    <Insets bottom="5.0" right="5.0" />
+                </VBox.margin>
+          </Button>
+        </VBox>
+    </VBox>
+</HBox>

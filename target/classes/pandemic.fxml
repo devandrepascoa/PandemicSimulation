@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<!-- File containing all the structuring for the View element of the Model-View-Controller paradigm -->
+
+<HBox styleClass="background" stylesheets="pandemic.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="models_controllers_others.PandemicController">
+    <Canvas fx:id="main_canvas" height="600.0"  width="600.0" />
+    <VBox alignment="TOP_RIGHT" prefHeight="600.0" prefWidth="413.0">
+        <LineChart fx:id="main_chart" legendSide="RIGHT" prefHeight="173.0" prefWidth="325.0">
+            <xAxis>
+                <CategoryAxis label="Seconds" side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="People" side="LEFT" />
+            </yAxis>
+        </LineChart>
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <Label fx:id="R0" alignment="CENTER" contentDisplay="CENTER" text="R0: 0.0">
+                <font>
+                    <Font size="22.0" />
+                </font>
+            </Label>
+            <Label fx:id="num_beds_filled" text="Beds Filled: 0" GridPane.columnIndex="1">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+        </GridPane>
+        <VBox>
+            <Slider fx:id="recovery_slider" accessibleText="Slider for recovery time" max="100000.0" value="15000.0" />
+            <Label layoutX="10.0" layoutY="55.0" text="Recovery Time" />
+            <Slider fx:id="symptoms_slider" accessibleText="Slider for symptoms time" max="100000.0" prefWidth="258.0" value="10000.0" />
+            <Label text="Symptoms time" />
+            <Slider fx:id="infective_r_slider" accessibleText="Slider for symptoms time" layoutX="10.0" layoutY="39.0" max="50.0" min="1.0" prefWidth="258.0" value="10.0" />
+            <Label layoutX="10.0" layoutY="55.0" text="Infective Radius" />
+        </VBox>
+        <Separator prefWidth="200.0" visible="false">
+            <VBox.margin>
+                <Insets bottom="15.0" />
+            </VBox.margin>
+        </Separator>
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <Button fx:id="start_btn" layoutX="10.0" layoutY="12.0" mnemonicParsing="false" onAction="#start_clicked" text="Start" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="reset_btn" layoutX="10.0" layoutY="12.0" mnemonicParsing="false" onAction="#reset_clicked" text="Reset" GridPane.rowIndex="2" />
+            <Label text="Population" GridPane.rowIndex="1" />
+            <Spinner fx:id="hospital_cap_spinner" editable="true" GridPane.columnIndex="1" />
+            <Spinner fx:id="population_spinner" editable="true" />
+            <Label layoutX="61.0" layoutY="47.0" text="Hospital Capacity" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        </GridPane>
+      <Separator layoutX="10.0" layoutY="335.0" prefWidth="200.0" visible="false">
+         <VBox.margin>
+            <Insets top="130.0" />
+         </VBox.margin>
+      </Separator>
+      <Button fx:id="graph_btn" alignment="CENTER" mnemonicParsing="false" onAction="#graph_btn_clicked" text="Go to Graph Mode">
+         <VBox.margin>
+            <Insets right="10.0" />
+         </VBox.margin></Button>
+    </VBox>
+</HBox>
