@@ -5,7 +5,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<HBox styleClass="background" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="models_controllers_others.GraphController">
+<HBox styleClass="background" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.devandrepascoa.main.GraphController">
     <Pane fx:id="canvas_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="706.0" />
     <VBox prefHeight="536.0" prefWidth="213.0">
         <ImageView fx:id="image_view" fitHeight="224.0" fitWidth="200.0" pickOnBounds="true">

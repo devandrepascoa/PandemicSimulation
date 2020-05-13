@@ -9,7 +9,7 @@
 
 <!-- File containing all the structuring for the View element of the Model-View-Controller paradigm -->
 
-<HBox styleClass="background" stylesheets="pandemic.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="models_controllers_others.PandemicController">
+<HBox styleClass="background" stylesheets="pandemic.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.devandrepascoa.main.PandemicController">
     <Canvas fx:id="main_canvas" height="600.0"  width="600.0" />
     <VBox alignment="TOP_RIGHT" prefHeight="600.0" prefWidth="413.0">
         <LineChart fx:id="main_chart" legendSide="RIGHT" prefHeight="173.0" prefWidth="325.0">
