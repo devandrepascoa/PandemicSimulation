@@ -2,7 +2,6 @@ module PandemicSimulation {
     requires javafx.controls;
     requires org.jfxtras.styles.jmetro;
     requires javafx.fxml;
-    requires org.abego.treelayout.core;
     requires java.desktop;
 
     opens com.devandrepascoa.main to javafx.fxml;

@@ -2,8 +2,8 @@ package com.devandrepascoa.main;
 
 import com.devandrepascoa.fxgraph.graph.Graph;
 import com.devandrepascoa.fxgraph.graph.Model;
-import com.devandrepascoa.fxgraph.layout.AbegoTreeLayout;
 import com.devandrepascoa.data_structure.Person;
+import com.devandrepascoa.fxgraph.layout.RandomLayout;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,7 +13,6 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import org.abego.treelayout.Configuration;
 
 /**
  * A controller for the graph.fxml view, the model however is implemented by the com.fxgraph library,
@@ -68,7 +67,7 @@ public class GraphController {
         graph_model.fromPersonTree(selected_person);
 
         graph.endUpdate();
-        graph.layout(new AbegoTreeLayout(200, 200, Configuration.Location.Top));
+        graph.layout(new RandomLayout());
     }
 
     /**

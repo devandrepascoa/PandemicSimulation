@@ -25,94 +25,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ad7b4eb-3989-4db9-bae7-f968dcabd569" name="Default Changelist" comment="Release 2.5.0">
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/PandemicSimulator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/intellij-javadocs-4.0.1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_abego_treelayout_org_abego_treelayout_core_1_0_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_controlsfx_controlsfx_11_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jfxtras_jmetro_11_6_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_linux_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_11_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_linux_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_11_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_linux_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_linux_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_mac_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_media_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_media_linux_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_web_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_web_linux_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PandemicSimulation.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pandemicsim.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PandemicSimulation.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/devandrepascoa/main/PandemicSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devandrepascoa/main/PandemicSimulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PandemicSimulation-2.5.0-jar-with-dependencies.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/data_structure/Bed$BedNotEmptyException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/data_structure/Bed.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/data_structure/City.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/data_structure/Constants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/data_structure/Hospital$HospitalFullException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/data_structure/Hospital.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/data_structure/Person$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/data_structure/Person$State.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/data_structure/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/data_structure/Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/cells/AbstractCell.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/cells/PersonCell.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/edges/AbstractEdge.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/edges/Edge$EdgeGraphic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/edges/Edge.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/Graph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/ICell.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/IEdge.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/IGraphNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/devandrepascoa/fxgraph/graph/MainApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/devandrepascoa/fxgraph/layout/AbegoTreeLayout.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/devandrepascoa/main/GraphController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devandrepascoa/main/GraphController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/MainApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/Model$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/Model.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/NodeGestures$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/NodeGestures$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/NodeGestures$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/NodeGestures$DragContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/NodeGestures.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/PannableCanvas$DragContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/PannableCanvas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/ViewportGestures$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/ViewportGestures$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/ViewportGestures$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/ViewportGestures.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/layout/AbegoTreeLayout$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/layout/AbegoTreeLayout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/layout/Layout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/layout/RandomLayout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/main/GraphController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/main/MathUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/main/PandemicController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/main/PandemicModel$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/main/PandemicModel$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/main/PandemicModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/main/PandemicSimulator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/main/PandemicSimulatorFix.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/default_id.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/graph.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pandemic.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pandemic.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/main/GraphController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/devandrepascoa/main/GraphController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +120,54 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Maven.deploy">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="PandemicSimulation" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="PandemicSimulation" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -202,10 +179,9 @@
             </option>
             <option name="goals">
               <list>
-                <option value="mvn" />
+                <option value="compile" />
                 <option value="clean" />
-                <option value="javafx:compile" />
-                <option value="javafx:run" />
+                <option value="javafx:jlink" />
               </list>
             </option>
             <option name="pomFileName" />
@@ -219,7 +195,34 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="pandemicsim [clean,javafx:compile...]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+    <configuration name="deploy" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="compile" />
+                <option value="clean" />
+                <option value="javafx:jlink" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="run" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -231,7 +234,7 @@
             <option name="goals">
               <list>
                 <option value="clean" />
-                <option value="javafx:compile" />
+                <option value="compile" />
                 <option value="javafx:run" />
               </list>
             </option>
@@ -246,6 +249,10 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Maven.run" />
+      <item itemvalue="Maven.deploy" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -345,10 +352,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="729" y="311" width="524" height="491" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1589202454127" />
-    <state x="437" y="143" width="1071" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589486044328">
+    <state x="437" y="143" width="1071" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589497315295">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="437" y="143" width="1071" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1589486044328" />
+    <state x="437" y="143" width="1071" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1589497315295" />
     <state x="779" y="261" width="424" height="591" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1589088874271">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -385,10 +392,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="756" y="27" width="470" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1588990218072" />
-    <state x="729" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589333611771">
+    <state x="729" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589486335928">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="729" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1589333611771" />
+    <state x="729" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1589486335928" />
     <state x="729" y="302" width="524" height="509" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1589220854020">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -409,22 +416,22 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="733" y="233" width="516" height="647" key="Github.UntrackedFilesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1588991580441" />
-    <state width="1224" height="234" key="GridCell.Tab.0.bottom" timestamp="1589486029326">
+    <state width="1802" height="234" key="GridCell.Tab.0.bottom" timestamp="1589497295348">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1224" height="234" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1589486029326" />
-    <state width="1224" height="234" key="GridCell.Tab.0.center" timestamp="1589486029326">
+    <state width="1802" height="234" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1589497295348" />
+    <state width="1802" height="234" key="GridCell.Tab.0.center" timestamp="1589497295347">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1224" height="234" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1589486029326" />
-    <state width="1224" height="234" key="GridCell.Tab.0.left" timestamp="1589486029325">
+    <state width="1802" height="234" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1589497295347" />
+    <state width="1802" height="234" key="GridCell.Tab.0.left" timestamp="1589497295347">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1224" height="234" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1589486029325" />
-    <state width="1224" height="234" key="GridCell.Tab.0.right" timestamp="1589486029326">
+    <state width="1802" height="234" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1589497295347" />
+    <state width="1802" height="234" key="GridCell.Tab.0.right" timestamp="1589497295347">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1224" height="234" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1589486029326" />
+    <state width="1802" height="234" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1589497295347" />
     <state width="1802" height="339" key="GridCell.Tab.1.bottom" timestamp="1589230692738">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -481,9 +488,13 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="660" y="252" key="run.anything.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1589386427408" />
-    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1589483725972">
+    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1589496344039">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1589483725972" />
+    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1589496344039" />
+    <state x="721" y="385" width="540" height="344" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1589494899269">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="721" y="385" width="540" height="344" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1589494899269" />
   </component>
 </project>
