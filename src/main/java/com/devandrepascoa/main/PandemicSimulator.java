@@ -9,6 +9,8 @@ import javafx.stage.Stage;
 import jfxtras.styles.jmetro.JMetro;
 import jfxtras.styles.jmetro.Style;
 
+import java.io.IOException;
+
 /**
  * Main driver, starts the application
  * @author André Páscoa, André Carvalho
@@ -21,10 +23,15 @@ public class PandemicSimulator extends Application {
      * @throws Exception thrown exception due to the loader.load() which accesses an external file
      */
     @Override
-    public void start(Stage window) throws Exception {
+    public void start(Stage window){
         //fxml is the equivalent of HTML in javaFX
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/pandemic.fxml"));
-        Parent root = loader.load(); //JavaFX is based on a graph like structure
+        Parent root = null; //JavaFX is based on a graph like structure
+        try {
+            root = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         //Creating the Model for the controller(Model-View-Controller paradigm)
         new PandemicModel(loader.getController());
 

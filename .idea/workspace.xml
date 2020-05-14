@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="PandemicSimulator" />
+    </artifacts-to-build>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4ad7b4eb-3989-4db9-bae7-f968dcabd569" name="Default Changelist" comment="Release 2.5.0">
+      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/PandemicSimulator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/intellij-javadocs-4.0.1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_abego_treelayout_org_abego_treelayout_core_1_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_controlsfx_controlsfx_11_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jfxtras_jmetro_11_6_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_linux_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_11_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_linux_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_11_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_linux_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_linux_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_mac_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_media_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_media_linux_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_web_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_web_linux_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PandemicSimulation.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/devandrepascoa/main/PandemicSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/devandrepascoa/main/PandemicSimulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PandemicSimulation-2.5.0-jar-with-dependencies.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/data_structure/Bed$BedNotEmptyException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/data_structure/Bed.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/data_structure/City.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/data_structure/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/data_structure/Hospital$HospitalFullException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/data_structure/Hospital.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/data_structure/Person$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/data_structure/Person$State.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/data_structure/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/data_structure/Point.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/cells/AbstractCell.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/cells/PersonCell.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/edges/AbstractEdge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/edges/Edge$EdgeGraphic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/edges/Edge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/Graph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/ICell.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/IEdge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/IGraphNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/MainApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/Model$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/Model.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/NodeGestures$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/NodeGestures$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/NodeGestures$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/NodeGestures$DragContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/NodeGestures.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/PannableCanvas$DragContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/PannableCanvas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/ViewportGestures$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/ViewportGestures$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/ViewportGestures$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/graph/ViewportGestures.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/layout/AbegoTreeLayout$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/layout/AbegoTreeLayout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/layout/Layout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/fxgraph/layout/RandomLayout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/main/GraphController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/main/MathUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/main/PandemicController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/main/PandemicModel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/main/PandemicModel$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/main/PandemicModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/main/PandemicSimulator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/devandrepascoa/main/PandemicSimulatorFix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/default_id.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/graph.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pandemic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pandemic.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="JavaFXApplication" />
+        <option value="FxmlFile" />
+        <option value="package-info" />
+        <option value="Class" />
+        <option value="module-info" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bb8JwRY4zhwYU6WDQUpjwwcyLZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/devandrepascoa" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java/com" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/Docs" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="mvn" />
+                <option value="clean" />
+                <option value="javafx:compile" />
+                <option value="javafx:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="pandemicsim [clean,javafx:compile...]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="javafx:compile" />
+                <option value="javafx:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4ad7b4eb-3989-4db9-bae7-f968dcabd569" name="Default Changelist" comment="" />
+      <created>1588889364940</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588889364940</updated>
+    </task>
+    <task id="LOCAL-00001" summary="First commit">
+      <created>1588991611193</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588991611194</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First commit">
+      <created>1588991687809</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588991687809</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fixing and tuning before 1.0.0 release">
+      <created>1588993188386</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588993188386</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Adding content">
+      <created>1588993667774</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1588993667774</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Version 2.0.0">
+      <created>1589106997932</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1589106997932</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Release 2.5.0">
+      <created>1589236556599</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1589236556599</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="First commit" />
+    <MESSAGE value="Fixing and tuning before 1.0.0 release" />
+    <MESSAGE value="Adding content" />
+    <MESSAGE value="Version 2.0.0" />
+    <MESSAGE value="Release 2.5.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Release 2.5.0" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="625" y="235" width="732" height="644" key="#Inspections" timestamp="1589204591128">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="625" y="235" width="732" height="644" key="#Inspections/72.27.1848.1053@72.27.1848.1053" timestamp="1589204591128" />
+    <state x="658" y="168" width="666" height="778" key="#PandemicSimulation-2.5.0.jar" timestamp="1589250732511">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="658" y="168" width="666" height="778" key="#PandemicSimulation-2.5.0.jar/72.27.1848.1053@72.27.1848.1053" timestamp="1589250732511" />
+    <state x="591" y="197" width="800" height="719" key="#Plugins" timestamp="1589483744302">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="591" y="197" width="800" height="719" key="#Plugins/72.27.1848.1053@72.27.1848.1053" timestamp="1589483744302" />
+    <state x="479" y="131" width="1024" height="852" key="#Project_Structure" timestamp="1589161792507">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="479" y="131" width="1024" height="852" key="#Project_Structure/72.27.1848.1053@72.27.1848.1053" timestamp="1589161792507" />
+    <state x="729" y="311" width="524" height="491" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1589202454127">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="729" y="311" width="524" height="491" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1589202454127" />
+    <state x="437" y="143" width="1071" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589486044328">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="437" y="143" width="1071" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1589486044328" />
+    <state x="779" y="261" width="424" height="591" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1589088874271">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="779" y="261" width="424" height="591" key="#com.intellij.ide.macro.MacrosDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1589088874271" />
+    <state x="1273" y="208" width="553" height="613" key="#com.intellij.ide.util.MemberChooser" timestamp="1589220970401">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="1273" y="208" width="553" height="613" key="#com.intellij.ide.util.MemberChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1589220970401" />
+    <state x="728" y="345" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1589248578683">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="728" y="345" width="525" height="423" key="#com.intellij.ide.util.TreeClassChooserDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1589248578683" />
+    <state x="701" y="223" width="579" height="668" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1589483758518">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="701" y="223" width="579" height="668" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1589483758518" />
+    <state x="803" y="226" width="375" height="661" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1589485890083">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="803" y="226" width="375" height="661" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1589485890083" />
+    <state x="703" y="310" width="576" height="493" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog" timestamp="1589204596221">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="703" y="310" width="576" height="493" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1589204596221" />
+    <state x="580" y="478" width="831" height="158" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1589251106837">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="580" y="478" width="831" height="158" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1589251106837" />
+    <state x="749" y="444" width="484" height="233" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1589137846033">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="749" y="444" width="484" height="233" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/72.27.1848.1053@72.27.1848.1053" timestamp="1589137846033" />
+    <state x="756" y="27" width="470" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588990218072">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="756" y="27" width="470" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1588990218072" />
+    <state x="729" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589333611771">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="729" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1589333611771" />
+    <state x="729" y="302" width="524" height="509" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1589220854020">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="729" y="302" width="524" height="509" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1589220854020" />
+    <state x="726" y="280" width="540" height="554" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1588993341346">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="726" y="280" width="540" height="554" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/72.27.1848.1053@72.27.1848.1053" timestamp="1588993341346" />
+    <state x="774" y="315" width="735" height="533" key="FileChooserDialogImpl" timestamp="1589107123642">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="774" y="315" width="735" height="533" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1589107123642" />
+    <state x="814" y="453" width="364" height="207" key="Github.ShareDialog" timestamp="1588991573318">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="814" y="453" width="364" height="207" key="Github.ShareDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1588991573318" />
+    <state x="733" y="233" width="516" height="647" key="Github.UntrackedFilesDialog" timestamp="1588991580441">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="733" y="233" width="516" height="647" key="Github.UntrackedFilesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1588991580441" />
+    <state width="1224" height="234" key="GridCell.Tab.0.bottom" timestamp="1589486029326">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1224" height="234" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1589486029326" />
+    <state width="1224" height="234" key="GridCell.Tab.0.center" timestamp="1589486029326">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1224" height="234" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1589486029326" />
+    <state width="1224" height="234" key="GridCell.Tab.0.left" timestamp="1589486029325">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1224" height="234" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1589486029325" />
+    <state width="1224" height="234" key="GridCell.Tab.0.right" timestamp="1589486029326">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1224" height="234" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1589486029326" />
+    <state width="1802" height="339" key="GridCell.Tab.1.bottom" timestamp="1589230692738">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1802" height="339" key="GridCell.Tab.1.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1589230692738" />
+    <state width="1802" height="339" key="GridCell.Tab.1.center" timestamp="1589230692738">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1802" height="339" key="GridCell.Tab.1.center/72.27.1848.1053@72.27.1848.1053" timestamp="1589230692738" />
+    <state width="1802" height="339" key="GridCell.Tab.1.left" timestamp="1589230692737">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1802" height="339" key="GridCell.Tab.1.left/72.27.1848.1053@72.27.1848.1053" timestamp="1589230692737" />
+    <state width="1802" height="339" key="GridCell.Tab.1.right" timestamp="1589230692738">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1802" height="339" key="GridCell.Tab.1.right/72.27.1848.1053@72.27.1848.1053" timestamp="1589230692738" />
+    <state x="529" y="211" width="924" height="691" key="Maven.ArtifactSearchDialog" timestamp="1589385629476">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="529" y="211" width="924" height="691" key="Maven.ArtifactSearchDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1589385629476" />
+    <state x="581" y="300" width="819" height="514" key="NewModule_or_Project.wizard" timestamp="1588933805934">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="581" y="300" width="819" height="514" key="NewModule_or_Project.wizard/72.27.1848.1053@72.27.1848.1053" timestamp="1588933805934" />
+    <state x="429" y="158" width="1233" height="737" key="SettingsEditor" timestamp="1589388043277">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="429" y="158" width="1233" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1589388043277" />
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1589236573497">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1589236573497" />
+    <state x="610" y="203" width="752" height="714" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589387822669">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="610" y="203" width="752" height="714" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1589387822669" />
+    <state x="767" y="468" width="458" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589106657869">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="767" y="468" width="458" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1848.1053@72.27.1848.1053" timestamp="1589106657869" />
+    <state x="770" y="319" width="442" height="476" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588941079473">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="770" y="319" width="442" height="476" key="com.intellij.testIntegration.createTest.CreateTestDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1588941079473" />
+    <state x="305" y="155" width="1372" height="803" key="new project wizard" timestamp="1589484595524">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="305" y="155" width="1372" height="803" key="new project wizard/72.27.1848.1053@72.27.1848.1053" timestamp="1589484595524" />
+    <state x="752" y="300" width="477" height="514" key="refactoring.ChangeSignatureDialog" timestamp="1589205628197">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="752" y="300" width="477" height="514" key="refactoring.ChangeSignatureDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1589205628197" />
+    <state x="660" y="252" key="run.anything.popup" timestamp="1589386427408">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="660" y="252" key="run.anything.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1589386427408" />
+    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1589483725972">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1589483725972" />
+  </component>
+</project>
