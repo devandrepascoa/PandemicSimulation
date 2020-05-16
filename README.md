@@ -5,12 +5,12 @@ Pandemic Simulator, includes features like Graph Visualization, Hyperparameters,
 # Real Time Model Visualization
 <img src="https://github.com/devandrepascoa/PandemicSimulation/blob/master/Docs/spreading.gif">
 
-#Graph Visualization
+# Graph Visualization
 <br>
 <br>
 <img src="https://github.com/devandrepascoa/PandemicSimulation/blob/master/Docs/graph.gif">
 
-#HyperParameters
+# HyperParameters
 
 <br>
 <br>
