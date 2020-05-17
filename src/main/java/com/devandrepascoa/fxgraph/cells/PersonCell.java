@@ -1,40 +1,25 @@
 package com.devandrepascoa.fxgraph.cells;
 
-import com.devandrepascoa.fxgraph.graph.Graph;
-
 import com.devandrepascoa.data_structure.Person;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
-public class PersonCell extends AbstractCell {
-
-    private Color color;
-    private Person person;
+/**
+ * Class for representing the {@link Person} object
+ * as an actual node, basically a wrapper
+ *
+ * @author André Páscoa, André Carvalho
+ * @version 2.1.0
+ */
+public class PersonCell extends Cell {
+    private final Person person;
 
     public PersonCell(Person person) {
-        color = Color.DODGERBLUE;
         this.person = person;
-    }
+        Rectangle view = new Rectangle(50, 50);
 
-    public PersonCell() {
-        color = Color.DODGERBLUE;
-    }
-
-    @Override
-    public Region getGraphic(Graph graph) {
-        final Rectangle view = new Rectangle(50, 50);
-
-        view.setStroke(color);
-        view.setFill(color);
-
-        final Pane pane = new Pane(view);
-        pane.setPrefSize(50, 50);
-        view.widthProperty().bind(pane.prefWidthProperty());
-        view.heightProperty().bind(pane.prefHeightProperty());
-
-        return pane;
+        setView(view);
+        setColor(Color.DODGERBLUE);
     }
 
     public Person getPerson() {
@@ -42,6 +27,8 @@ public class PersonCell extends AbstractCell {
     }
 
     public void setColor(Color color) {
-        this.color = color;
+        Rectangle view = (Rectangle) this.view;
+        view.setStroke(color);
+        view.setFill(color);
     }
 }

@@ -1,124 +1,65 @@
 package com.devandrepascoa.fxgraph.graph;
 
-import com.devandrepascoa.fxgraph.cells.AbstractCell;
-import com.devandrepascoa.fxgraph.cells.PersonCell;
-import com.devandrepascoa.fxgraph.edges.Edge;
 import com.devandrepascoa.data_structure.Person;
+import com.devandrepascoa.fxgraph.cells.Cell;
+import com.devandrepascoa.fxgraph.cells.PersonCell;
+import com.devandrepascoa.fxgraph.cells.RectangleCell;
+import com.devandrepascoa.fxgraph.edges.Edge;
+import com.devandrepascoa.fxgraph.edges.LineEdge;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
 
-import java.io.Serializable;
 import java.util.List;
 
-public class Model implements Serializable {
+/**
+ * Model of the Tree, holds the tree as a {@link List} of cells
+ * instead of a reference tree representation due to performance
+ * requirements
+ *
+ * @author André Páscoa, André Carvalho
+ * @version 2.1.0
+ */
+public class Model {
 
-    private static final long serialVersionUID = 172247271876446110L;
+    public Cell getRoot() {
+        return root;
+    }
 
-    private final ICell root;
+    private final Cell root;
+    private Cell real_root;
 
-    private ObservableList<ICell> allCells;
-    private transient ObservableList<ICell> addedCells;
-    private transient ObservableList<ICell> removedCells;
+    private ObservableList<Cell> allCells;
+    private ObservableList<Edge> allEdges;
 
-    private ObservableList<IEdge> allEdges;
-    private transient ObservableList<IEdge> addedEdges;
-    private transient ObservableList<IEdge> removedEdges;
 
     public Model() {
-        root = new AbstractCell() {
-            @Override
-            public Region getGraphic(Graph graph) {
-                return null;
-            }
-        };
+
+        root = new RectangleCell();
+
         // clear model, create lists
         clear();
     }
 
     public void clear() {
         allCells = FXCollections.observableArrayList();
-        addedCells = FXCollections.observableArrayList();
-        removedCells = FXCollections.observableArrayList();
-
         allEdges = FXCollections.observableArrayList();
-        addedEdges = FXCollections.observableArrayList();
-        removedEdges = FXCollections.observableArrayList();
     }
 
-    public void clearAddedLists() {
-        addedCells.clear();
-        addedEdges.clear();
-    }
-
-    public void endUpdate() {
-        // every cell must have a parent, if it doesn't, then the graphParent is
-        // the parent
-        attachOrphansToGraphParent(getAddedCells());
-
-        // remove reference to graphParent
-        disconnectFromGraphParent(getRemovedCells());
-
-        // merge added & removed cells with all cells
-        merge();
-    }
-
-    public ObservableList<ICell> getAddedCells() {
-        return addedCells;
-    }
-
-    public ObservableList<ICell> getRemovedCells() {
-        return removedCells;
-    }
-
-    public ObservableList<ICell> getAllCells() {
+    public ObservableList<Cell> getAllCells() {
         return allCells;
     }
 
-    public ObservableList<IEdge> getAddedEdges() {
-        return addedEdges;
-    }
-
-    public ObservableList<IEdge> getRemovedEdges() {
-        return removedEdges;
-    }
-
-    public ObservableList<IEdge> getAllEdges() {
+    public ObservableList<Edge> getAllEdges() {
         return allEdges;
     }
 
-    public void addCell(ICell cell) {
-        if (cell == null) {
-            throw new NullPointerException("Cannot add a null cell");
-        }
-        addedCells.add(cell);
+    public void addCell(Cell cell) {
+        allCells.add(cell);
     }
 
-    public void removeCell(ICell cell) {
-        if (cell == null) {
-            throw new NullPointerException("Cannot remove a null cell");
-        }
-        removedCells.add(cell);
-    }
-
-    public void addEdge(ICell sourceCell, ICell targetCell) {
-        final IEdge edge = new Edge(sourceCell, targetCell);
-        addEdge(edge);
-    }
-
-    public void addEdge(IEdge edge) {
-        if (edge == null) {
-            throw new NullPointerException("Cannot add a null edge");
-        }
-        addedEdges.add(edge);
-    }
-
-    public void removeEdge(IEdge edge) {
-        if (edge == null) {
-            throw new NullPointerException("Cannot remove a null edge");
-        }
-        removedEdges.add(edge);
+    public void addEdge(Edge edge) {
+        allEdges.add(edge);
     }
 
     /**
@@ -126,44 +67,14 @@ public class Model implements Serializable {
      *
      * @param cellList
      */
-    public void attachOrphansToGraphParent(List<ICell> cellList) {
-        for (final ICell cell : cellList) {
+    public void attachOrphansToGraphParent(List<Cell> cellList) {
+        for (Cell cell : cellList) {
             if (cell.getCellParents().size() == 0) {
                 root.addCellChild(cell);
             }
         }
     }
 
-    /**
-     * Remove the graphParent reference if it is set
-     *
-     * @param cellList
-     */
-    public void disconnectFromGraphParent(List<ICell> cellList) {
-        for (final ICell cell : cellList) {
-            root.removeCellChild(cell);
-        }
-    }
-
-    public ICell getRoot() {
-        return root;
-    }
-
-    public void merge() {
-        // cells
-        allCells.addAll(addedCells);
-        allCells.removeAll(removedCells);
-
-        addedCells.clear();
-        removedCells.clear();
-
-        // edges
-        allEdges.addAll(addedEdges);
-        allEdges.removeAll(removedEdges);
-
-        addedEdges.clear();
-        removedEdges.clear();
-    }
 
     /**
      * Converts the Person tree, into a graph model,
@@ -174,6 +85,7 @@ public class Model implements Serializable {
     public void fromPersonTree(Person root) {
         PersonCell root_cell = new PersonCell(root);
         root_cell.setColor(Color.RED);
+        real_root = root_cell;
         addCell(root_cell);
         fromPersonTree(root_cell);
     }
@@ -185,7 +97,11 @@ public class Model implements Serializable {
             PersonCell new_cell = new PersonCell(person.getInfectedPeople().get(i));
             fromPersonTree(new_cell);
             addCell(new_cell);
-            addEdge(cell, new_cell);
+            addEdge(new LineEdge(cell, new_cell));
         }
+    }
+
+    public Cell getReal_root() {
+        return real_root;
     }
 }

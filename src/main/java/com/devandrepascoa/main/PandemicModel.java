@@ -2,7 +2,6 @@ package com.devandrepascoa.main;
 
 import com.devandrepascoa.data_structure.City;
 import com.devandrepascoa.data_structure.Constants;
-import com.devandrepascoa.data_structure.Person;
 import javafx.animation.AnimationTimer;
 import javafx.application.Platform;
 import javafx.scene.canvas.Canvas;
@@ -22,9 +21,8 @@ import java.util.TimerTask;
 public class PandemicModel {
 
     public static int DELAY; //Update delay(Will update at 60 FPS)
-    private long start_time; //Used for keeping track of time, useful for charting
     private City city;
-    private final Constants constants;
+    private Constants constants;
     private int counter_paint;
     private int counter_update;
 
@@ -50,9 +48,9 @@ public class PandemicModel {
         this.controller = controller;
         controller.setModel(this);
         constants = new Constants();
-        fillConstants();
+        fillConstants(); //Fills constants field object with controller cache variable values
+
         city = new City(constants);
-        start_time = System.currentTimeMillis();
         chartNumInfected = new XYChart.Series<>();
         chartNumDead = new XYChart.Series<>();
         chartNumInfected.setName("Infected");
@@ -60,7 +58,15 @@ public class PandemicModel {
         controller.getChart().getData().add(chartNumDead);
         controller.getChart().getData().add(chartNumInfected);
 
-        //Workload will be separated between two threads, one for GUI and another for the simulation
+        create_threads(); //creates threads
+    }
+
+    /**
+     * Method for creating the threads, wrapper classes {@link Timer} and {@link AnimationTimer} used,
+     * due to scheduling needs and JavaFX GUI requirements
+     * Workload will be separated between two threads, one for GUI and another for the simulation
+     */
+    private void create_threads() {
 
         //Worker timer, used for updating data structure
         new Timer().schedule(new TimerTask() {
@@ -121,13 +127,7 @@ public class PandemicModel {
      * Fills the {@link Constants} instance with data from the {@link PandemicController}
      */
     private void fillConstants() {
-        constants.width = (int) controller.getCanvas().getWidth();
-        constants.height = (int) controller.getCanvas().getHeight();
-        constants.infective_radius = controller.getInfective_r_amount();
-        constants.symptoms_time = controller.getSymptoms_amount();
-        constants.recovery_time = controller.getRecovery_amount();
-        constants.num_people = controller.getPopulation_size();
-        constants.hospital_capacity = controller.getHospital_cap();
+        this.constants = controller.getConstants();
         System.out.println(constants);
     }
 
@@ -158,28 +158,16 @@ public class PandemicModel {
      * data structure.
      */
     private void update() {
+        //Updates city by one step
+        city.update();
 
-        //Updates the population
-        double R = 0;
-        for (int i = 0; i < city.getNumPeople(); i++) {
-            Person selected_person = city.getPopulation().get(i);
-            selected_person.update(city);
-            if (selected_person.getState() != Person.State.SUSCEPTIBLE) {
-                R += selected_person.getInfectedPeople().size();
-            }
-        }
-
-        //Has to be here due to Threading and updating the UI
-        final double R0 = MathUtils.getRoundedNumber((city.getZero_day().getInfectedPeople().size()), 2);
-        final double finalR = MathUtils.getRoundedNumber(R / city.getNum_infected(), 2);
-        System.out.println(finalR);
+        final double R0 = Utils.getRoundedNumber((city.getZero_day().getInfectedPeople().size()), 2);
         Platform.runLater(() -> { //Communicates with the controller to update the UI
             controller.setR0(R0);
-            controller.setR(finalR);
             controller.setNum_beds_filled(city.getHospital().getNum_filled_beds());
         });
 
-        //Graph traversal test
+        //Graph traversal test, for debugging and future features related with tree traversal
 //        if (counter_update % 100 == 0) {
 //            LinkedList<Person> lista_nodes = city.iterativePreOrder();
 //            for (Person p : lista_nodes) {
@@ -190,7 +178,15 @@ public class PandemicModel {
 //        }
     }
 
+    //ACCESSORS
+
     public City getCity() {
         return city;
     }
+
+    public Constants getConstants() {
+        return constants;
+    }
+
+
 }

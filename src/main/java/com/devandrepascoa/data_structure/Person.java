@@ -2,7 +2,7 @@ package com.devandrepascoa.data_structure;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
-import com.devandrepascoa.main.MathUtils;
+import com.devandrepascoa.main.Utils;
 import com.devandrepascoa.main.PandemicModel;
 
 import java.util.ArrayList;
@@ -13,12 +13,13 @@ import java.util.ArrayList;
  * due to it's infectedPeople attribute
  *
  * @author André Páscoa, André Carvalho
- * @version 2.5.0
+ * @version 2.1.0
  */
 public class Person extends Point {
     private final Constants constants;
     private State state;
     private final String name;
+    private final int photo_id;
     /**
      * The references to all infected people, this provides essence
      * for creating the graph for which we will be able to plot
@@ -27,7 +28,7 @@ public class Person extends Point {
     private ArrayList<Person> infectedPeople;
 
     //Attributes, Will change based on slider input
-    private int time_since_infected = 0;
+    private int time_since_infected;
     private boolean inHospital;
 
     /**
@@ -42,11 +43,14 @@ public class Person extends Point {
         this.name = name;
         this.infectedPeople = new ArrayList<>();
         this.inHospital = false;
+        time_since_infected = 0;
+        this.photo_id = Utils.randomGenerator(1, 100);
+
     }
 
 
     /**
-     * Method that paints the com.data_structure.Person to the canvas
+     * Method that paints the {@link Person} to the canvas
      *
      * @param g Canvas Graphics Context
      */
@@ -70,9 +74,8 @@ public class Person extends Point {
                 break;
         }
 
-
+        //Prints the person as an oval
         if (!inHospital)
-            //com.data_structure.Person painted as an oval
             g.fillOval(
                     this.x,
                     this.y,
@@ -80,8 +83,8 @@ public class Person extends Point {
     }
 
     /**
-     * Function that updates variables like velocity
-     * based on the game state
+     * Function that updates variables like velocity,
+     * state and others based on the game state
      *
      * @param city Map instance, used for collision detection
      *             and interacting with other people
@@ -102,7 +105,7 @@ public class Person extends Point {
             }
             if (time_since_infected > constants.recovery_time) {
                 this.state = State.RECOVERED;
-                int prob = MathUtils.randomGenerator(0, 99);
+                int prob = Utils.randomGenerator(0, 99);
                 if (inHospital) { //If in hospital, probability of death is different
                     if (prob < constants.death_prob_hospital) {
                         this.state = State.DEAD;
@@ -118,7 +121,7 @@ public class Person extends Point {
                     city.addNumDead(1);
                 }
             }
-        } else this.time_since_infected = 0;
+        }
 
         //Updates the person's location
         super.update(city);
@@ -145,7 +148,7 @@ public class Person extends Point {
      * Function used for adding a person to the list
      * of "child" nodes, used for the representation
      * of infection based on a graph, where the initial
-     * node is the first infect patient
+     * node is the first infected patient
      *
      * @param person {@link Person} instance
      */
@@ -155,7 +158,7 @@ public class Person extends Point {
 
     /**
      * Function to check whether a {@link Point} like
-     * com.data_structure.Person instance, is within the radius of this
+     * {@link Person} instance, is within the radius of this
      * instance's infective radius
      *
      * @param p2 {@link Person} instance
@@ -173,6 +176,10 @@ public class Person extends Point {
         return (this.getState() == State.INFECTED || this.getState() == State.INFECTED_NO_SYMPTOMS);
     }
 
+    public int getPhoto_id() {
+        return photo_id;
+    }
+
 
     /**
      * Enumeration containing all the states a person can have
@@ -182,7 +189,7 @@ public class Person extends Point {
     }
 
 
-    //Accessors
+    //ACCESSORS
     public String getName() {
         return name;
     }

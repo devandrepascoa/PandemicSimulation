@@ -1,12 +1,12 @@
 package com.devandrepascoa.data_structure;
 
-import com.devandrepascoa.main.MathUtils;
+import com.devandrepascoa.main.Utils;
 
 /**
  * Class that represents an object in the Canvas
  *
  * @author André Páscoa, André Carvalho
- * @version 2.5.0
+ * @version 2.1.0
  */
 public class Point {
     //Position
@@ -19,40 +19,8 @@ public class Point {
     public Point(int x, int y) {
         this.x = x;
         this.y = y;
-        this.dx = MathUtils.randomGenerator(-2, 2);
-        this.dy = MathUtils.randomGenerator(-2, 2);
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-
-    public int getX() {
-        return x;
-    }
-
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public float getDy() {
-        return dy;
-    }
-
-    public void setDy(int dy) {
-        this.dy = dy;
-    }
-
-    public float getDx() {
-        return dx;
-    }
-
-    public void setDx(int dx) {
-        this.dx = dx;
+        this.dx = Utils.randomGenerator(-2, 2);
+        this.dy = Utils.randomGenerator(-2, 2);
     }
 
 
@@ -93,11 +61,58 @@ public class Point {
         return "(" + x + "," + y + ")";
     }
 
+    /**
+     * Checks if another point is within radius of this instance
+     *
+     * @param p2     another point
+     * @param radius touching radius
+     * @return yes if it's within the radius
+     */
     public boolean withinRadius(Point p2, int radius) {
         return getDistance(p2) <= radius;
     }
 
+    /**
+     * Function to get the distance between two points
+     *
+     * @param p2 another point
+     * @return distance in pixels between the two objects
+     */
     public float getDistance(Point p2) {
         return (float) Math.sqrt((this.x - p2.getX()) * (this.x - p2.getX()) + (this.y - p2.getY()) * (this.y - p2.getY()));
+    }
+
+    //ACCESSORS
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public float getDy() {
+        return dy;
+    }
+
+    public void setDy(int dy) {
+        this.dy = dy;
+    }
+
+    public float getDx() {
+        return dx;
+    }
+
+    public void setDx(int dx) {
+        this.dx = dx;
     }
 }

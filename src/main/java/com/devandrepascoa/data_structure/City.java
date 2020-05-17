@@ -1,5 +1,6 @@
 package com.devandrepascoa.data_structure;
 
+import com.devandrepascoa.main.Utils;
 import javafx.scene.canvas.GraphicsContext;
 
 import java.util.ArrayList;
@@ -10,27 +11,32 @@ import java.util.Stack;
  * Class containing the data structure for the population, and other variables
  *
  * @author André Páscoa, André Carvalho
- * @version 2.5.0
-
+ * @version 2.1.0
  */
 public class City {
     private final Constants constants;
     private final Person zero_day;
     private ArrayList<Person> population;
-    private final Hospital hospital; //com.data_structure.City's hospital
-    //Starts with 1 due to the zero day patient
-    //used so it's not necessary to calculate the infected
-    //people graph every time we require the number of infected
+    private final Hospital hospital;
+    /**
+     * Used so it's not necessary to calculate the infected
+     * people graph every time we require the number of infected
+     */
     private int num_infected = 1;
     private int num_dead = 0;
 
 
+    /**
+     * Instantiates a new City.
+     *
+     * @param constants the constants
+     */
     public City(Constants constants) {
         this.constants = constants;
         hospital = new Hospital(constants.hospital_capacity);
         population = new ArrayList<>();
         //Creating the first patient
-        zero_day = new Person("Pablo Escobar", constants.width / 2, constants.height / 2, constants);
+        zero_day = new Person(Utils.getRandomName(), constants.width / 2, constants.height / 2, constants);
         zero_day.setState(Person.State.INFECTED_NO_SYMPTOMS);
         population.add(zero_day);
 
@@ -39,12 +45,15 @@ public class City {
             int x = (int) (Math.random() * constants.width);
             int y = (int) (Math.random() * constants.height);
 
-            population.add(new Person("Pablo Escobar", x, y, constants));
+            population.add(new Person(Utils.getRandomName(), x, y, constants));
         }
+
     }
 
 
     /**
+     * Iterative pre order linked list.
+     *
      * @return returns a list of a pre order depth first traversal of the infected people graph
      */
     public LinkedList<Person> iterativePreOrder() {
@@ -102,7 +111,17 @@ public class City {
         }
     }
 
-    //Accessors
+    /**
+     * Method used for updating the population values,
+     * NON-GUI
+     */
+    public void update() {
+        for (Person person : population) {
+            person.update(this);
+        }
+    }
+
+    //ACCESSORS
     public int getNumPeople() {
         return this.population.size();
     }
@@ -136,4 +155,6 @@ public class City {
     public Constants getConstants() {
         return constants;
     }
+
+
 }

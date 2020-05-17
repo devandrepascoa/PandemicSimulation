@@ -1,82 +1,58 @@
 package com.devandrepascoa.fxgraph.graph;
 
+import com.devandrepascoa.fxgraph.cells.PersonCell;
 import javafx.event.EventHandler;
 import javafx.scene.Node;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 
+/**
+ * Class for adding selectable capability to a node
+ *
+ * @author André Páscoa, André Carvalho
+ * @version 2.1.0
+ */
 public class NodeGestures {
 
-	final DragContext dragContext = new DragContext();
-	final Graph graph;
-	private static Node current_node;
+    final Graph graph;
+    private static Node current_node;
 
-	public NodeGestures(Graph graph) {
-		this.graph = graph;
-	}
+    public NodeGestures(Graph graph) {
+        this.graph = graph;
+    }
 
-	public static Node getCurrent_node() {
-		return current_node;
-	}
 
-	public static void setCurrent_node(Node current_node) {
-		NodeGestures.current_node = current_node;
-	}
+    public void makeSelectable(final Node node) {
+        node.setOnMousePressed(onMousePressedEventHandler);
+    }
 
-	public void makeDraggable(final Node node) {
-		node.setOnMousePressed(onMousePressedEventHandler);
-		node.setOnMouseDragged(onMouseDraggedEventHandler);
-		node.setOnMouseReleased(onMouseReleasedEventHandler);
-	}
+    public void makeUnselectable(final Node node) {
+        node.setOnMousePressed(null);
+    }
 
-	public void makeUndraggable(final Node node) {
-		node.setOnMousePressed(null);
-		node.setOnMouseDragged(null);
-		node.setOnMouseReleased(null);
-	}
+    /**
+     * Mouse Pressed handler for each node
+     */
+    final EventHandler<MouseEvent> onMousePressedEventHandler = new EventHandler<>() {
 
-	final EventHandler<MouseEvent> onMousePressedEventHandler = new EventHandler<MouseEvent>() {
+        @Override
+        public void handle(MouseEvent event) {
+            if (event.getButton() == MouseButton.PRIMARY) {
+                final PersonCell node = (PersonCell) event.getSource();
+                graph.setSelected_cell(node);
+                graph.update_info(node);
+            }
+            event.consume();
+        }
+    };
 
-		@Override
-		public void handle(MouseEvent event) {
-			final Node node = (Node) event.getSource();
-			final double scale = graph.getScale();
-			dragContext.x = node.getBoundsInParent().getMinX() * scale - event.getScreenX();
-			dragContext.y = node.getBoundsInParent().getMinY() * scale - event.getScreenY();
-		}
-	};
+    //ACCESSORS
 
-	final EventHandler<MouseEvent> onMouseDraggedEventHandler = new EventHandler<MouseEvent>() {
+    public static Node getCurrent_node() {
+        return current_node;
+    }
 
-		@Override
-		public void handle(MouseEvent event) {
-			if (event.getButton() == MouseButton.PRIMARY) {
-				final Node node = (Node) event.getSource();
-
-				double offsetX = event.getScreenX() + dragContext.x;
-				double offsetY = event.getScreenY() + dragContext.y;
-
-				// adjust the offset in case we are zoomed
-				final double scale = graph.getScale();
-
-				offsetX /= scale;
-				offsetY /= scale;
-
-				node.relocate(offsetX, offsetY);
-			}
-		}
-	};
-
-	final EventHandler<MouseEvent> onMouseReleasedEventHandler = new EventHandler<MouseEvent>() {
-
-		@Override
-		public void handle(MouseEvent event) {
-
-		}
-	};
-
-	public static class DragContext {
-		double x;
-		double y;
-	}
+    public static void setCurrent_node(Node current_node) {
+        NodeGestures.current_node = current_node;
+    }
 }

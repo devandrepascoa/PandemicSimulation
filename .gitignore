@@ -1,4 +1,3 @@
-# Project exclude paths
-/out/
-/.idea
-/pandemicsim.iml
+/target/
+.idea
+pandemicsim.iml

@@ -1,13 +1,13 @@
 package com.devandrepascoa.data_structure;
 
 /**
- * Class with multiple "constants", they are not static,
+ * Class with multiple "constants", they are not static
  * due to the possibility of being accessed by multiple Threads,
  * and because of that an object of type {@link Constants} will be passed
  * around when creating a city, so only after reset will changes be applied(Intended use)
  *
  * @author André Páscoa, André Carvalho
- * @version 2.5.0
+ * @version 2.1.0
  */
 public class Constants {
     public int size = 5;
@@ -16,10 +16,10 @@ public class Constants {
     public int hospital_capacity = 0;
     public int recovery_time = 15000;
     public int symptoms_time = 10000;
-    public int death_prob = 50;
+    public int death_prob = 40;
     public int death_prob_hospital = 3;
     public int infective_radius = 10;
-    public int num_people = 100;
+    public int num_people = 50;
 
     @Override
     public String toString() {
