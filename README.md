@@ -1,16 +1,16 @@
 Pandemic Simulator, includes features like Graph Visualization, Hyperparameters,model visualization and a plot of the diseased and infected population.
+# Real Time Model Visualization
 
 <br>
 <br>
-# Real Time Model Visualization
 <img src="https://github.com/devandrepascoa/PandemicSimulation/blob/master/Docs/spreading.gif">
 
-#Graph Visualization
+# Graph Visualization
 <br>
 <br>
 <img src="https://github.com/devandrepascoa/PandemicSimulation/blob/master/Docs/graph.gif">
 
-#HyperParameters
+# HyperParameters
 
 <br>
 <br>
