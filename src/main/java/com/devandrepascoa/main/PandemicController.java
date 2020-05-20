@@ -180,7 +180,7 @@ public class PandemicController {
     @FXML
     private void graph_btn_clicked(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/graph.fxml"));
-
+        turnOff();
         Parent root = loader.load();
 
         //Saves Simulator mode scene in cache for returning to it
@@ -207,6 +207,15 @@ public class PandemicController {
         graph_controller.setSelected_person(new PersonCell(model.getCity().getZero_day()));
 
         graph_controller.create_graph();
+    }
+
+    /**
+     * Turns off the model
+     */
+    public void turnOff() {
+        if(isRunning()){
+            start_clicked(null);
+        }
     }
 
 
