@@ -7,6 +7,8 @@ Pandemic Simulator, includes features like Graph Visualization, Hyperparameters,
 
 Docs with visio and word file at ./Docs
 
+To run the simulation, go to /bin/launcher.bat for window or /bin/launcher for linux
+
 # Real Time Model Visualization
 
 <br>
