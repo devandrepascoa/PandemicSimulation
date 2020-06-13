@@ -1,0 +1,13 @@
+module:PandemicSimulation
+com.devandrepascoa.data_structure
+com.devandrepascoa.fxgraph.cells
+com.devandrepascoa.fxgraph.edges
+com.devandrepascoa.fxgraph.graph
+com.devandrepascoa.fxgraph.layout
+com.devandrepascoa.main
+org.abego.treelayout
+org.abego.treelayout.internal.util
+org.abego.treelayout.internal.util.java.lang
+org.abego.treelayout.internal.util.java.lang.string
+org.abego.treelayout.internal.util.java.util
+org.abego.treelayout.util

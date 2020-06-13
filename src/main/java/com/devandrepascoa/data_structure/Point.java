@@ -30,14 +30,13 @@ public class Point {
      *
      * @param city a datastructure containing a population,
      *             and other useful things
+     * @param width
+     * @param height
      */
-    public void update(City city) {
+    public void update(City city, int width, int height) {
         //Updates velocities
         this.x += this.dx;
         this.y += this.dy;
-        //Retrieves city borders
-        int width = city.getConstants().width;
-        int height = city.getConstants().height;
 
         //Does Border collision on x axis
         //and inverts velocity if it hits wall

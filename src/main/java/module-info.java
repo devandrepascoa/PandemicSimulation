@@ -6,6 +6,7 @@ module PandemicSimulation {
     requires javafx.graphics;
     requires javafx.fxml;
     requires org.jfxtras.styles.jmetro;
+    requires com.google.gson;
 
     opens com.devandrepascoa.main to javafx.fxml;
     exports com.devandrepascoa.main;

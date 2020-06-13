@@ -16,7 +16,6 @@ import java.util.ArrayList;
  * @version 2.1.0
  */
 public class Person extends Point {
-    private final Constants constants;
     private State state;
     private final String name;
     private final int photo_id;
@@ -31,14 +30,24 @@ public class Person extends Point {
     private int time_since_infected;
     private boolean inHospital;
 
+    //Variables shared between all objects of this instance
+    //Basically they are the config variables, in the future
+    //each individual person may have a different time
+    //but for simplicity's sake we'll keep it like this
+    public static int size;
+    public static int symptoms_time;
+    public static int recovery_time;
+    public static int death_prob_hospital;
+    public static int death_prob;
+    public static int infective_radius;
+
     /**
      * @param name com.data_structure.Person's name, used for interactive purposes(non simulation)
      * @param x    Initial com.data_structure.Person's x coordinate
      * @param y    Initial com.data_structure.Person's y coordinate
      */
-    public Person(String name, int x, int y, Constants constants) {
+    public Person(String name, int x, int y) {
         super(x, y);
-        this.constants = constants;
         this.state = State.SUSCEPTIBLE;
         this.name = name;
         this.infectedPeople = new ArrayList<>();
@@ -79,7 +88,7 @@ public class Person extends Point {
             g.fillOval(
                     this.x,
                     this.y,
-                    constants.size, constants.size);
+                    size, size);
     }
 
     /**
@@ -88,13 +97,15 @@ public class Person extends Point {
      *
      * @param city Map instance, used for collision detection
      *             and interacting with other people
+     * @param width
+     * @param height
      */
-    public void update(City city) {
+    public void update(City city, int width, int height) {
         //Handles state change after infection
         if (state != State.SUSCEPTIBLE && state != State.RECOVERED && state != State.DEAD) {
             this.time_since_infected += PandemicModel.DELAY;
 
-            if (time_since_infected > constants.symptoms_time) {
+            if (time_since_infected > symptoms_time) {
                 this.state = State.INFECTED;
                 if (!city.getHospital().isFull() && !inHospital) {
                     city.getHospital().addPerson(this);
@@ -103,17 +114,17 @@ public class Person extends Point {
                     this.dy = 0;
                 }
             }
-            if (time_since_infected > constants.recovery_time) {
+            if (time_since_infected > recovery_time) {
                 this.state = State.RECOVERED;
                 int prob = Utils.randomGenerator(0, 99);
                 if (inHospital) { //If in hospital, probability of death is different
-                    if (prob < constants.death_prob_hospital) {
+                    if (prob < death_prob_hospital) {
                         this.state = State.DEAD;
                         this.dx = 0;
                         this.dy = 0;
                         city.addNumDead(1);
                     }
-                } else if (prob < constants.death_prob) { //10% Probability to die if person not in hospital
+                } else if (prob < death_prob) { //10% Probability to die if person not in hospital
                     this.state = State.DEAD;
                     //If the person is dead, reset their velocities
                     this.dx = 0;
@@ -124,7 +135,7 @@ public class Person extends Point {
         }
 
         //Updates the person's location
-        super.update(city);
+        super.update(city, width, height);
 
         //Iterates through every person in the map
         //and checks for collisions with this instance
@@ -165,7 +176,7 @@ public class Person extends Point {
      * @return true if p2 is within radius of infection
      */
     public boolean collision(Person p2) {
-        return this.withinRadius(p2, constants.infective_radius);
+        return this.withinRadius(p2, infective_radius);
     }
 
 

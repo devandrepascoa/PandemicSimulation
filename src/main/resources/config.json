@@ -1,0 +1,12 @@
+{
+  "size": 5,
+  "width": 600,
+  "height": 600,
+  "hospital_capacity": 0,
+  "recovery_time": 15000,
+  "symptoms_time": 10000,
+  "death_prob": 40,
+  "death_prob_hospital": 3,
+  "infective_radius": 10,
+  "num_people": 50
+}

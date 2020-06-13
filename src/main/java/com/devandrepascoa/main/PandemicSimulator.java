@@ -33,6 +33,7 @@ public class PandemicSimulator extends Application {
      */
     @Override
     public void start(Stage window) throws IOException {
+
         //Generates the cache names
         first_names = Utils.readAllFileIntoArray(getClass().getResource("/names_dataset/first_names.all.txt"));
         last_names = Utils.readAllFileIntoArray(getClass().getResource("/names_dataset/last_names.all.txt"));
@@ -74,3 +75,5 @@ public class PandemicSimulator extends Application {
         return first_names;
     }
 }
+
+

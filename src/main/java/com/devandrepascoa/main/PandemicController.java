@@ -1,7 +1,9 @@
 package com.devandrepascoa.main;
 
-import com.devandrepascoa.data_structure.Constants;
+import com.devandrepascoa.data_structure.Person;
 import com.devandrepascoa.fxgraph.cells.PersonCell;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,6 +19,9 @@ import jfxtras.styles.jmetro.JMetro;
 import jfxtras.styles.jmetro.Style;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 /**
  * A controller for the pandemic.fxml file, used for
@@ -30,6 +35,8 @@ public class PandemicController {
     //FXML object references
     @FXML
     private Spinner<Integer> death_prob_spin;
+    @FXML
+    private Button reset_btn;
     @FXML
     private Spinner<Integer> death_prob_hos_spin;
     @FXML
@@ -72,40 +79,50 @@ public class PandemicController {
      * so the {@link FXMLLoader} still has access to it
      */
     @FXML
-    private void initialize() {
-        //Object to obtain default variables for the constants;
-        Constants constants = new Constants();
+    private void initialize() throws IOException, URISyntaxException {
+        Gson json_parser = new Gson();
+        JsonObject config = json_parser.fromJson(Files.readString(Paths.get(getClass().getResource("/config.json").toURI())), JsonObject.class);
+        //Setting constants based on config file
+        Person.size = config.get("size").getAsInt();
+        Person.death_prob = config.get("death_prob").getAsInt();
+        Person.death_prob_hospital = config.get("death_prob_hospital").getAsInt();
+        Person.infective_radius = config.get("infective_radius").getAsInt();
+        Person.recovery_time = config.get("recovery_time").getAsInt();
+        Person.symptoms_time = config.get("symptoms_time").getAsInt();
+        System.out.println(config.toString());
 
         //Creates all the sliders for adjusting hyperparameters
-        createSliders(constants);
+        createSpinners(config.get("hospital_capacity").getAsInt(),
+                config.get("num_people").getAsInt(), config.get("death_prob_hospital").getAsInt(),
+                config.get("death_prob").getAsInt());
 
         //Creates all the spinners for adjusting hyperparameters
-        createSpinners(constants);
+        createSliders(config.get("recovery_time").getAsInt(),
+                config.get("symptoms_time").getAsInt(), config.get("infective_radius").getAsInt());
+
     }
 
     /**
      * Method that creates the spinner factories, and adds listeners
      * which will be used for updating the cache variables
-     *
-     * @param constants object containing initial, default values
      */
-    private void createSpinners(Constants constants) {
+    private void createSpinners(int initial_hospital_capacity, int initial_num_people, int initial_death_prob_hospital, int initial_death_prob) {
         //Value factory for the spinners, it enables them(wouldn't work otherwise)
-        SpinnerValueFactory<Integer> hos_spin_fac = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, Integer.MAX_VALUE, constants.hospital_capacity);
+        SpinnerValueFactory<Integer> hos_spin_fac = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, Integer.MAX_VALUE, initial_hospital_capacity);
         hospital_cap_spinner.setValueFactory(hos_spin_fac);
-        SpinnerValueFactory<Integer> pop_spin_fac = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, Integer.MAX_VALUE, constants.num_people);
+        SpinnerValueFactory<Integer> pop_spin_fac = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, Integer.MAX_VALUE, initial_num_people);
         population_spinner.setValueFactory(pop_spin_fac);
 
-        SpinnerValueFactory<Integer> death_prob_hos_spin_fac = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, constants.death_prob_hospital);
+        SpinnerValueFactory<Integer> death_prob_hos_spin_fac = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, initial_death_prob_hospital);
         death_prob_hos_spin.setValueFactory(death_prob_hos_spin_fac);
-        SpinnerValueFactory<Integer> death_prob_spin_fac = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, constants.death_prob);
+        SpinnerValueFactory<Integer> death_prob_spin_fac = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, initial_death_prob);
         death_prob_spin.setValueFactory(death_prob_spin_fac);
 
         //Presetting the cache variables
-        hospital_cap = hos_spin_fac.getValue();
-        population_size = pop_spin_fac.getValue();
-        death_prob_hos = death_prob_hos_spin_fac.getValue();
-        death_prob = death_prob_spin_fac.getValue();
+        this.hospital_cap = hos_spin_fac.getValue();
+        this.population_size = pop_spin_fac.getValue();
+        this.death_prob_hos = death_prob_hos_spin_fac.getValue();
+        this.death_prob = death_prob_spin_fac.getValue();
 
         //Creating a listener to update cache variables
         hospital_cap_spinner.valueProperty().addListener((observable, oldValue, newValue) -> {
@@ -124,12 +141,9 @@ public class PandemicController {
 
     /**
      * method that adds listeners to the sliders
-     * which will be used for updating the cache variables,
-     * also sets default values based on {@link Constants} parameter
-     *
-     * @param constants object containing initial, default values
+     * which will be used for updating the cache variables
      */
-    private void createSliders(Constants constants) {
+    private void createSliders(int initial_recovery_time, int initial_symptoms_time, int initial_infective_radius) {
         //Listens for a change in the sliders, and if there's one, update their respective amount
         recovery_slider.valueProperty().addListener((observable, oldValue, newValue) -> {
             this.recovery_amount = newValue.intValue();
@@ -138,19 +152,25 @@ public class PandemicController {
                 this.recovery_slider.setValue(this.recovery_amount);
             }
         });
-        recovery_slider.setValue(constants.recovery_time); //Sets default value
+        recovery_slider.setMax(100000);
+        recovery_slider.setMin(0);
+        recovery_slider.setValue(initial_recovery_time); //Sets default value
         symptoms_slider.valueProperty().addListener((observable, oldValue, newValue) -> {
             this.symptoms_amount = newValue.intValue();
-            if (this.symptoms_amount > recovery_amount) {
-                this.symptoms_amount = recovery_amount;
+            if (this.symptoms_amount > this.recovery_amount) {
+                this.symptoms_amount = this.recovery_amount;
                 this.symptoms_slider.setValue(this.symptoms_amount);
             }
         });
-        symptoms_slider.setValue(constants.symptoms_time);
+        symptoms_slider.setMax(100000);
+        symptoms_slider.setMin(0);
+        symptoms_slider.setValue(initial_symptoms_time);
         infective_r_slider.valueProperty().addListener((observable, oldValue, newValue) -> {
             this.infective_r_amount = newValue.intValue();
         });
-        infective_r_slider.setValue(constants.infective_radius);
+        infective_r_slider.setMax(50);
+        infective_r_slider.setMin(1);
+        infective_r_slider.setValue(initial_infective_radius);
 
         //Pre assigning values to cache variables
         this.recovery_amount = (int) recovery_slider.getValue();
@@ -213,7 +233,7 @@ public class PandemicController {
      * Turns off the model
      */
     public void turnOff() {
-        if(isRunning()){
+        if (isRunning()) {
             start_clicked(null);
         }
     }
@@ -228,26 +248,7 @@ public class PandemicController {
         this.reset = true;
     }
 
-    /**
-     * @return A {@link Constants} based on all the values from the sliders and spinners
-     */
-    public Constants getConstants() {
-        Constants constants = new Constants();
-        constants.width = (int) this.getCanvas().getWidth();
-        constants.height = (int) this.getCanvas().getHeight();
-        constants.infective_radius = this.infective_r_amount;
-        constants.symptoms_time = this.symptoms_amount;
-        constants.recovery_time = this.recovery_amount;
-        constants.num_people = this.population_size;
-        constants.hospital_capacity = this.hospital_cap;
-        constants.death_prob = this.death_prob;
-        constants.death_prob_hospital = this.death_prob_hos;
-        return constants;
-
-    }
-
     //ACCESSORS
-
     public Canvas getCanvas() {
         return main_canvas;
     }
@@ -280,4 +281,31 @@ public class PandemicController {
         this.model = pandemicModel;
     }
 
+    public int getRecovery_amount() {
+        return recovery_amount;
+    }
+
+    public int getSymptoms_amount() {
+        return symptoms_amount;
+    }
+
+    public int getInfective_r_amount() {
+        return infective_r_amount;
+    }
+
+    public int getPopulation_size() {
+        return population_size;
+    }
+
+    public int getDeath_prob_hos() {
+        return death_prob_hos;
+    }
+
+    public int getDeath_prob() {
+        return death_prob;
+    }
+
+    public int getHospital_cap() {
+        return hospital_cap;
+    }
 }

@@ -51,11 +51,11 @@
             </Label>
         </GridPane>
         <VBox>
-            <Slider fx:id="recovery_slider" accessibleText="Slider for recovery time" max="100000.0" value="15000.0" />
+            <Slider fx:id="recovery_slider" accessibleText="Slider for recovery time" />
             <Label layoutX="10.0" layoutY="55.0" text="Recovery Time" />
-            <Slider fx:id="symptoms_slider" accessibleText="Slider for symptoms time" max="100000.0" prefWidth="258.0" value="10000.0" />
+            <Slider fx:id="symptoms_slider" accessibleText="Slider for symptoms time"  />
             <Label text="Symptoms time" />
-            <Slider fx:id="infective_r_slider" accessibleText="Slider for symptoms time" layoutX="10.0" layoutY="39.0" max="50.0" min="1.0" prefWidth="258.0" value="10.0" />
+            <Slider fx:id="infective_r_slider" accessibleText="Slider for symptoms time" layoutX="10.0" layoutY="39.0" prefWidth="258.0" />
             <Label layoutX="10.0" layoutY="55.0" text="Infective Radius" />
         </VBox>
         <Separator prefWidth="200.0" visible="false">

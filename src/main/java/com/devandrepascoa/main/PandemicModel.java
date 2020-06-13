@@ -1,7 +1,6 @@
 package com.devandrepascoa.main;
 
 import com.devandrepascoa.data_structure.City;
-import com.devandrepascoa.data_structure.Constants;
 import javafx.animation.AnimationTimer;
 import javafx.application.Platform;
 import javafx.scene.canvas.Canvas;
@@ -22,8 +21,6 @@ public class PandemicModel {
 
     public static int DELAY; //Update delay(Will update at 60 FPS)
     private City city;
-    private Constants constants;
-    private int counter_paint;
     private int counter_update;
 
     /**
@@ -42,15 +39,12 @@ public class PandemicModel {
     public PandemicModel(PandemicController controller) {
         //Initializations
         DELAY = 16;
-        counter_paint = 0;
         model_time = 0;
         counter_update = 0;
         this.controller = controller;
         controller.setModel(this);
-        constants = new Constants();
-        fillConstants(); //Fills constants field object with controller cache variable values
-
-        city = new City(constants);
+        city = new City(controller.getHospital_cap(), controller.getPopulation_size(),
+                (int) controller.getCanvas().getWidth(), (int) controller.getCanvas().getHeight());
         chartNumInfected = new XYChart.Series<>();
         chartNumDead = new XYChart.Series<>();
         chartNumInfected.setName("Infected");
@@ -78,10 +72,9 @@ public class PandemicModel {
                         chartNumInfected.getData().clear();
                     });
                     model_time = 0;
-                    fillConstants();
-                    city = new City(constants);
+                    city = new City(controller.getHospital_cap(), controller.getPopulation_size(),
+                            (int) controller.getCanvas().getWidth(), (int) controller.getCanvas().getHeight());
                     counter_update = 0;
-                    counter_paint = 0;
                     controller.turnResetOff();
                 }
                 if (controller.isRunning()) { //If it's running
@@ -105,7 +98,6 @@ public class PandemicModel {
                 Platform.runLater(() -> {
                     paint(controller.getCanvas());
 
-                    counter_paint++;
                 });
 
             }
@@ -121,14 +113,6 @@ public class PandemicModel {
             chartNumDead.getData().add(new XYChart.Data<>(String.valueOf(current_time), city.getNum_dead()));
         });
 
-    }
-
-    /**
-     * Fills the {@link Constants} instance with data from the {@link PandemicController}
-     */
-    private void fillConstants() {
-        this.constants = controller.getConstants();
-        System.out.println(constants);
     }
 
 
@@ -159,7 +143,7 @@ public class PandemicModel {
      */
     private void update() {
         //Updates city by one step
-        city.update();
+        city.update((int) controller.getCanvas().getWidth(), (int) controller.getCanvas().getHeight());
 
         final double R0 = Utils.getRoundedNumber((city.getZero_day().getInfectedPeople().size()), 2);
         Platform.runLater(() -> { //Communicates with the controller to update the UI
@@ -183,10 +167,5 @@ public class PandemicModel {
     public City getCity() {
         return city;
     }
-
-    public Constants getConstants() {
-        return constants;
-    }
-
 
 }

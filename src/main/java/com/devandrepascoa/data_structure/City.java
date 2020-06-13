@@ -14,7 +14,6 @@ import java.util.Stack;
  * @version 2.1.0
  */
 public class City {
-    private final Constants constants;
     private final Person zero_day;
     private ArrayList<Person> population;
     private final Hospital hospital;
@@ -25,27 +24,23 @@ public class City {
     private int num_infected = 1;
     private int num_dead = 0;
 
-
     /**
      * Instantiates a new City.
-     *
-     * @param constants the constants
      */
-    public City(Constants constants) {
-        this.constants = constants;
-        hospital = new Hospital(constants.hospital_capacity);
+    public City(int hospital_capacity, int num_people, int width, int height) {
+        hospital = new Hospital(hospital_capacity);
         population = new ArrayList<>();
         //Creating the first patient
-        zero_day = new Person(Utils.getRandomName(), constants.width / 2, constants.height / 2, constants);
+        zero_day = new Person(Utils.getRandomName(), width / 2, height / 2);
         zero_day.setState(Person.State.INFECTED_NO_SYMPTOMS);
         population.add(zero_day);
 
         //Generating a random distribution of num_people-1
-        for (int i = 1; i < constants.num_people; i++) {
-            int x = (int) (Math.random() * constants.width);
-            int y = (int) (Math.random() * constants.height);
+        for (int i = 1; i < num_people; i++) {
+            int x = (int) (Math.random() * width);
+            int y = (int) (Math.random() * height);
 
-            population.add(new Person(Utils.getRandomName(), x, y, constants));
+            population.add(new Person(Utils.getRandomName(), x, y));
         }
 
     }
@@ -115,9 +110,9 @@ public class City {
      * Method used for updating the population values,
      * NON-GUI
      */
-    public void update() {
+    public void update(int width, int height) {
         for (Person person : population) {
-            person.update(this);
+            person.update(this,width,height);
         }
     }
 
@@ -150,11 +145,5 @@ public class City {
     public int getNum_dead() {
         return num_dead;
     }
-
-
-    public Constants getConstants() {
-        return constants;
-    }
-
 
 }
