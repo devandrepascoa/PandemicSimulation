@@ -76,7 +76,8 @@ public class PandemicController {
     /**
      * Method that will run whenever FXML is loaded,
      * {@link FXML} anottation used for making method private,
-     * so the {@link FXMLLoader} still has access to it
+     * so the {@link FXMLLoader} still has access to it,
+     * parses json config and places defaults all over the program
      */
     @FXML
     private void initialize() throws IOException, URISyntaxException {
